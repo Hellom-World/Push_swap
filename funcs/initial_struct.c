@@ -6,9 +6,21 @@ typedef struct s_stack
         struct s_stack  *prev;
 }       t_stack;
 
-void	empilha(int valor, int index, t_stack *p)
+void    printPilha(t_stack *a)
 {
-	
+        int     i = 0;
+        i = a->index-1;
+        while(i >= 0)
+        {
+                printf(" %i\n", p->nbr[i]);
+                i--;
+        }
+}
+
+void	empilha(int valor, int index, t_stack *p, )
+{
+	p->nbr[p->index] = valor;
+	p->index++;
 }
 
 int	main(int argc, char **argv)
@@ -16,7 +28,5 @@ int	main(int argc, char **argv)
 	t_stack	a;
 	t_stack	b;
 
-	a.index = 0;
-
-	
+	a.index = 0;	
 }
