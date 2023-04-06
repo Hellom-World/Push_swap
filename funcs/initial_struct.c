@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef struct s_stack
 {
         long                    nbr;
@@ -8,25 +11,46 @@ typedef struct s_stack
 
 void    printPilha(t_stack *a)
 {
-        int     i = 0;
-        i = a->index-1;
-        while(i >= 0)
+        while(a)
         {
-                printf(" %i\n", p->nbr[i]);
-                i--;
+                printf("vlr: %ld - ", a->nbr);
+		printf("id: %ld\n", a->index);
+                a = a->next;
         }
 }
 
-void	empilha(int valor, int index, t_stack *p, )
+void	insert_in(int index, int valor, t_stack **list)
 {
-	p->nbr[p->index] = valor;
-	p->index++;
+	t_stack *card = malloc(sizeof(t_stack));
+
+	if (card)
+	{
+		card->nbr = valor;
+		card->next = *list;
+		card->index = index;
+
+		*list = card;
+	}
+	else
+		printf("Erro ao alocar memoria!\n");
 }
 
 int	main(int argc, char **argv)
 {
-	t_stack	a;
+	int	i = 1;
+	int	j = 0;
+	t_stack	*a = NULL;
 	t_stack	b;
 
-	a.index = 0;	
+	if (argc >= 2)
+	{
+		while (argv[i])
+		{
+			insert_in(j, atoi(argv[i]), &a);
+			i++;
+			j++;
+		}
+	}
+	printPilha(a);
+		
 }
