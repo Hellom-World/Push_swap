@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_ordem.c                                   :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 14:34:40 by heolivei          #+#    #+#             */
-/*   Updated: 2023/04/25 15:13:58 by heolivei         ###   ########.fr       */
+/*   Created: 2022/11/03 11:24:36 by heolivei          #+#    #+#             */
+/*   Updated: 2022/11/06 13:38:52 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	ft_checkordem(t_stack *stack_a)
+void	ft_bzero(void *s, size_t n)
 {
-	int	i;
-
-	i = stack_a->nbr;
-	while (stack_a)
-	{
-		if (i > stack_a->nbr)
-			return (0);
-		i = stack_a->nbr;
-		stack_a = stack_a->next;
-	}
+	ft_memset(s, '\0', n);
 }

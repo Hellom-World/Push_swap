@@ -1,32 +1,40 @@
-NAME	= push_swap
+SRCS			=	ft_atoi.c ft_strlen.c ft_memcpy.c ft_isalpha.c \
+				ft_isdigit.c ft_isalnum.c ft_isascii.c ft_memset.c \
+				ft_bzero.c ft_memmove.c ft_memchr.c ft_memcmp.c \
+				ft_isprint.c ft_toupper.c ft_tolower.c ft_strchr.c \
+			       	ft_strrchr.c ft_strncmp.c ft_strlcat.c ft_strlcpy.c \
+				ft_strnstr.c ft_calloc.c ft_strdup.c ft_substr.c \
+				ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
+				ft_strmapi.c ft_putchar_fd.c ft_striteri.c ft_putstr_fd.c \
+				ft_putnbr_fd.c ft_putendl_fd.c
 
-FLAGS	= -Wall -Wextra -Werror -g
-CC	= cc $(FLAGS)
+SRCS_BONUS 		=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+				ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+				ft_lstmap.c
+OBJS			= $(SRCS:.c=.o)
+BONUS_OBJS		= $(SRCS_BONUS:.c=.o)
+CC			= cc
+CFLAGS			= -Wall -Wextra -Werror
+LIBCR			= ar rc
+RM			= rm -f
 
-LIBFT	= libft/libft.a
+NAME			= libft.a
 
-SRCS	=	push_swap.c
+all:			libft.a
 
-OBJS	= $(SRCS:.c=.o)
+libft.a:	$(SRCS:.c=.o)
+			ar rc $(NAME) *.o
 
-
-%.o: %.c
-	$(CC) -c $^
-
-$(NAME): $(OBJS) $(LIBFT)
-	$(CC) $(OBJS) $(LIBFT) -o $(NAME)
-
-$(LIBFT):
-	cd libft && $(MAKE)
+bonus:		$(SRCS:.c=.o) $(SRCS_BONUS:.c=.o)
+			ar rc $(NAME) *.o
 
 clean:
-	rm -f $(OBJS)
+			rm -f $(SRCS:.c=.o) $(SRCS_BONUS:.c=.o)
+fclean:			clean
+			rm -f $(NAME)
 
-fclean: clean
-	cd libft && $(MAKE) fclean
-	rm -f $(NAME)
+re:			fclean all
 
-re: fclean all
-
-.PHONY = all clean fclean re
-
+so:	
+			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCS_BONUS)
+			gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)

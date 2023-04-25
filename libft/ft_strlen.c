@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_ordem.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 14:34:40 by heolivei          #+#    #+#             */
-/*   Updated: 2023/04/25 15:13:58 by heolivei         ###   ########.fr       */
+/*   Created: 2022/11/04 13:54:20 by heolivei          #+#    #+#             */
+/*   Updated: 2022/11/08 18:54:36 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	ft_checkordem(t_stack *stack_a)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	l;
 
-	i = stack_a->nbr;
-	while (stack_a)
-	{
-		if (i > stack_a->nbr)
-			return (0);
-		i = stack_a->nbr;
-		stack_a = stack_a->next;
-	}
+	l = 0;
+	while (s[l] != 0)
+		l++;
+	return (l);
 }

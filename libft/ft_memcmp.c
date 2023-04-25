@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_ordem.c                                   :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 14:34:40 by heolivei          #+#    #+#             */
-/*   Updated: 2023/04/25 15:13:58 by heolivei         ###   ########.fr       */
+/*   Created: 2022/11/16 14:08:05 by heolivei          #+#    #+#             */
+/*   Updated: 2022/11/17 14:11:45 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	ft_checkordem(t_stack *stack_a)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	size_t			i;
+	unsigned char	*ucs1;
+	unsigned char	*ucs2;
 
-	i = stack_a->nbr;
-	while (stack_a)
+	ucs1 = (unsigned char *)s1;
+	ucs2 = (unsigned char *)s2;
+	i = 0;
+	while (i < n)
 	{
-		if (i > stack_a->nbr)
-			return (0);
-		i = stack_a->nbr;
-		stack_a = stack_a->next;
+		if (ucs1[i] != ucs2[i])
+			return (ucs1[i] - ucs2[i]);
+		i++;
 	}
+	return (0);
 }

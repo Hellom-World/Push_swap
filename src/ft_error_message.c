@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_ordem.c                                   :+:      :+:    :+:   */
+/*   ft_error_message.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 14:34:40 by heolivei          #+#    #+#             */
-/*   Updated: 2023/04/25 15:13:58 by heolivei         ###   ########.fr       */
+/*   Created: 2023/04/25 14:35:56 by heolivei          #+#    #+#             */
+/*   Updated: 2023/04/25 14:54:18 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_checkordem(t_stack *stack_a)
+void	ft_error(void)
 {
-	int	i;
-
-	i = stack_a->nbr;
-	while (stack_a)
-	{
-		if (i > stack_a->nbr)
-			return (0);
-		i = stack_a->nbr;
-		stack_a = stack_a->next;
-	}
+	write(1, "error\n", 6);
+	exit(1);
 }

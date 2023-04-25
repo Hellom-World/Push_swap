@@ -1,17 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/25 14:32:31 by heolivei          #+#    #+#             */
+/*   Updated: 2023/04/25 14:55:53 by heolivei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "push_swap.h"
 
 int	main(int argc, char **argv)
 {
-	t_stack	*a; //o indentificador "t_stack" ainda nao esta definido
+	t_stack	*a;
 
 	a = ft_triagem(argc, argv);
-	if(!a || ft_isdup(a))
+	if (!a || ft_isdup(a))
 	{
 		ft_free(&a);
 		ft_error();
 	}
-	
-	if(!ft_checksorted(a))
+	if (!ft_check_ordem(a))
 	{
 		ft_sort(&a);
 	}

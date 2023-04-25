@@ -1,14 +1,28 @@
-void    ft_free(t_stack **lst)
-{
-    t_stack *tmp;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/25 14:36:35 by heolivei          #+#    #+#             */
+/*   Updated: 2023/04/25 14:59:04 by heolivei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    if (!lst)
-        return;
-    while (*lst)
-    {
-        tmp = (*lst)->next;
-        (*lst)->nbr = 0;
-        free(*lst);
-        *lst = tmp;
-    }
+#include "push_swap.h"
+
+void	ft_free(t_stack **lst)
+{
+	t_stack	*tmp;
+
+	if (!lst)
+		return ;
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		(*lst)->nbr = 0;
+		free(*lst);
+		*lst = tmp;
+	}
 }
