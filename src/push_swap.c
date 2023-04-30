@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	main(int argc, char **argv)
 {
@@ -22,9 +22,9 @@ int	main(int argc, char **argv)
 		ft_free(&a);
 		ft_error();
 	}
-	if (!ft_check_ordem(a))
+	if (!ft_checkordem(a))
 	{
-		ft_sort(&a);
+		//ft_sort(&a);
 	}
 	ft_free(&a);
 	return (0);

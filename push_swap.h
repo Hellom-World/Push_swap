@@ -11,7 +11,7 @@ typedef struct s_stack
     struct s_stack  *prev;
 }   t_stack;
 
-t_stack ft_end_node(t_stack *lst);
+t_stack *ft_end_node(t_stack *lst);
 t_stack *ft_stringway(char **argv);
 t_stack *ft_stack_new(int content);
 t_stack *ft_triagem(int argc, char **argv);

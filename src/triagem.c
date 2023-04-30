@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 t_stack	*ft_stringway(char **argv)
 {
@@ -28,7 +28,7 @@ t_stack	*ft_stringway(char **argv)
 		ft_add_back(&a, ft_stack_new(j));
 		i++;
 	}
-	ft_freestr(tmp);
+	//ft_freestr(tmp);
 	free(tmp);
 	return (a);
 }

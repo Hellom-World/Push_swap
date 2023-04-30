@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_checkordem(t_stack *stack_a)
 {
@@ -24,4 +24,6 @@ int	ft_checkordem(t_stack *stack_a)
 		i = stack_a->nbr;
 		stack_a = stack_a->next;
 	}
+
+	return (1);
 }
