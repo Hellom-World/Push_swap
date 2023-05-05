@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   triagem.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:33:53 by heolivei          #+#    #+#             */
-/*   Updated: 2023/04/25 14:53:34 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:37:53 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+#include <stdio.h>
 
 t_stack	*ft_stringway(char **argv)
 {
@@ -49,6 +50,7 @@ t_stack	*ft_triagem(int argc, char **argv)
 	{
 		while (i < argc)
 		{
+			printf("%s\n", argv[i]);
 			j = ft_atoi(argv[i]);
 			ft_add_back(&a, ft_stack_new(j));
 			i++;

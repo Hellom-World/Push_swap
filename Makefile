@@ -18,12 +18,18 @@ SRC	=	src/ft_add_back.c \
 OBJ = ${SRC:.c=.o}
 
 ${NAME}:	${OBJ}
-		make -C $(LIBFTDIR)
-		${CC} ${FLAGS} ${OBJ} -o ${NAME} -L./libft -lft
+		@make -C $(LIBFTDIR)
+		@${CC} ${FLAGS} ${OBJ} -o ${NAME} -L./libft -lft
 
 all:	${NAME}
 
 
 clean:	
-		${RM} *.o
-		cd libft/ && $(MAKE) clean
+		cd src/ &&   ${RM} *.o
+		cd libft/ && make clean
+
+fclean:	clean
+		 ${RM} ${NAME}
+		cd libft/ && make fclean
+
+re:	fclean all
