@@ -6,7 +6,7 @@
 /*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:32:31 by heolivei          #+#    #+#             */
-/*   Updated: 2023/05/08 15:51:02 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/05/09 20:27:08 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,17 @@ void printList(t_stack *head)
  	}
  }
 
-void	ft_sa(t_stack **a)
+void	ft_swap(t_stack **head)
 {
-	t_stack	*tmp;
+	 t_stack *tmp;
 
-	if (!*a || !(*a)->next)
-		return ;
+        if (!*head || !(*head)->next)
+                return ;
 
-	tmp = *a;
-	*a = (*a)->next;
-	tmp->next = (*a)->next;
-	(*a)->next = tmp;
-
-	write(1, "sa\n", 3);
+        tmp = *head;
+        *head = (*head)->next;
+        tmp->next = (*head)->next;
+        (*head)->next = tmp;
 }
 
 void	ft_sb(t_stack **b)
@@ -55,7 +53,7 @@ void	ft_sb(t_stack **b)
 
 void	ft_ss(t_stack **a, t_stack **b)
 {
-	ft_sa(a);
+	//ft_sa(a);
 	ft_sb(b);
 }
 
@@ -74,7 +72,7 @@ int	main(int argc, char **argv)
 	{
 		printList(a);
 		
-		ft_ss(&a, &a);
+		//ft_sa(&a);
 
 		printList(a);
 		//ft_sort(&a);
