@@ -14,6 +14,8 @@ SRC	=	src/ft_add_back.c \
 		src/nodes_fts.c \
 		src/push_swap.c \
 		src/triagem.c \
+		src/operation_1.c \
+		src/operation_2.c \
 
 OBJ = ${SRC:.c=.o}
 
