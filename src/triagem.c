@@ -6,7 +6,7 @@
 /*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:33:53 by heolivei          #+#    #+#             */
-/*   Updated: 2023/05/08 14:29:09 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/05/12 12:27:43 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ t_stack	*ft_triagem(int argc, char **argv)
 	int		i;
 	int		j;
 
-	i = 0;
+	i = 1;
 	a = NULL;
 	if (argc < 2)
 		ft_error();
