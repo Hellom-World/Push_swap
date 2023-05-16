@@ -2,6 +2,8 @@
 # define PUSH_SWAP_H
 
 # include "libft/libft.h"
+# include <stdio.h>
+
 
 typedef struct s_stack
 {
@@ -32,6 +34,7 @@ void    ft_rrb(t_stack **b);
 void    ft_free(t_stack **lst);
 void	ft_swap(t_stack **head);
 void    ft_rotate(t_stack **head);
+void    ft_sort(t_stack **stack_a);
 void    ft_rev_rotate(t_stack **head);
 void    ft_ss(t_stack **a, t_stack **b);
 void    ft_rr(t_stack **a, t_stack **b);
