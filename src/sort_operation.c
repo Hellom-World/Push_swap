@@ -6,7 +6,7 @@
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 18:41:11 by heolivei          #+#    #+#             */
-/*   Updated: 2023/05/16 20:00:37 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/05/18 19:07:13 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	ft_sort(t_stack **stack_a)
 
 	if(ft_node_len(*stack_a))
 	{
-		ft_sa(stack_a);
+		ft_sort_three(stack_a);
 		printList(*stack_a, stack_b);
 	}
 	ft_free(&stack_b);

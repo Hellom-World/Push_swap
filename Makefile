@@ -16,7 +16,9 @@ SRC	=	src/ft_add_back.c \
 		src/triagem.c \
 		src/operation_1.c \
 		src/operation_2.c \
-		src/sort_operation.c
+		src/sort_operation.c \
+		src/ft_sort_three.c \
+		src/ft_utils.c
 
 OBJ = ${SRC:.c=.o}
 
