@@ -6,7 +6,7 @@
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 19:19:21 by heolivei          #+#    #+#             */
-/*   Updated: 2023/05/18 19:30:33 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/05/22 19:01:50 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_stack
 t_stack	*ft_end_node(t_stack *lst);
 t_stack	*ft_stringway(char **argv);
 t_stack	*ft_stack_new(int content);
+t_stack *ft_sort_b(t_stack **stack_a);
 t_stack	*ft_triagem(int argc, char **argv);
 
 int	ft_isdup(t_stack *a);

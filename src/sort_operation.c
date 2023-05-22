@@ -6,7 +6,7 @@
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 18:41:11 by heolivei          #+#    #+#             */
-/*   Updated: 2023/05/18 19:07:13 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/05/22 19:13:12 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,39 @@ void printList(t_stack *head_a, t_stack *head_b)
         write(1, "\n", 1);
 }
 
+t_stack	*ft_sort_b(t_stack **stack_a)
+{
+	t_stack *stack_b;
+
+	stack_b = NULL;
+
+	if (ft_node_len(*stack_a) > 3 && !ft_checkordem(*stack_a))
+	{
+		ft_pb(stack_a, &stack_b);
+	}
+	if (ft_node_len(*stack_a) > 3 && !ft_checkordem(*stack_a))
+        {
+                ft_pb(stack_a, &stack_b);
+        }
+	if (ft_node_len(*stack_a) == 3 && !ft_checkordem(*stack_a))
+		ft_sort_three(stack_a);
+	return (stack_b);
+}
 
 void	ft_sort(t_stack **stack_a)
 {
 	t_stack	*stack_b;
 
 	stack_b = NULL;
-
-	if(ft_node_len(*stack_a))
+	
+	if (ft_node_len(*stack_a) == 2)
 	{
-		ft_sort_three(stack_a);
+		ft_sa(stack_a);
+		printList(*stack_a, stack_b);
+	}
+	else
+	{	
+		stack_b = ft_sort_b(stack_a);
 		printList(*stack_a, stack_b);
 	}
 	ft_free(&stack_b);
