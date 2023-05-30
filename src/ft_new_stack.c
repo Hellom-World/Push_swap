@@ -6,13 +6,13 @@
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:37:14 by heolivei          #+#    #+#             */
-/*   Updated: 2023/04/25 15:23:39 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/05/30 17:35:59 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-t_stack	*ft_stack_new(int content)
+t_stack	*ft_stack_new(int content, int index)
 {
 	t_stack	*new;
 
@@ -20,6 +20,7 @@ t_stack	*ft_stack_new(int content)
 	if (!new)
 		ft_error();
 	new->nbr = content;
+	new->index = index;
 	new->next = NULL;
 	return (new);
 }
