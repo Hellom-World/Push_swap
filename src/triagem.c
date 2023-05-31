@@ -6,7 +6,7 @@
 /*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:33:53 by heolivei          #+#    #+#             */
-/*   Updated: 2023/05/30 18:31:12 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/05/31 19:29:19 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int     get_index(int n, int *arr_org, int size)
                         break ;
                 i++;
         }
-        return (i);
+        return (i + 1);
 }
 
 t_stack	*ft_triagem(int *arr, int size)
@@ -101,28 +101,8 @@ t_stack	*ft_triagem(int *arr, int size)
 	int		index;
 	int		*arr_copy;
 
-	i = 0;
-	while (i < size)
-        {
-                printf("%d - ", arr[i]);
-                i++;
-        }
-        printf("\n");
         arr_copy = copy_arr(arr, size);
-	i = 0;
-        while (i < size)
-        {
-                printf("%d - ", arr_copy[i]);
-                i++;
-        }
         sort_array(arr_copy, size);
-        i = 0;
-        printf("\nArray_copy organizado: \n");
-        while (i < size)
-        {
-                printf(" %d - ", arr_copy[i]);
-                i++;
-        }
 	i = 0;
 	a = NULL;
 
@@ -130,11 +110,9 @@ t_stack	*ft_triagem(int *arr, int size)
 		ft_error();
 	else
 	{
-		printf("\n");
 		while (i < size)
 		{
-			printf(" %d -", arr[i]);
-			ft_add_back(&a, ft_stack_new(arr[i], get_index(arr_copy[i], arr, size)));
+			ft_add_back(&a, ft_stack_new(arr[i], get_index(arr[i], arr_copy, size)));
 			i++;
 		}
 	}
