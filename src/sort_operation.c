@@ -6,7 +6,7 @@
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 18:41:11 by heolivei          #+#    #+#             */
-/*   Updated: 2023/05/31 20:11:16 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:45:06 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,16 +92,9 @@ t_stack	*ft_sort_b(t_stack **stack_a)
 
 	stack_b = NULL;
 
-	if (ft_node_len(*stack_a) > 3 && !ft_checkordem(*stack_a))
-	{
-		ft_pb(stack_a, &stack_b);
-	}
-	if (ft_node_len(*stack_a) > 3 && !ft_checkordem(*stack_a))
-        {
-                ft_pb(stack_a, &stack_b);
-        }
 	tmp = *stack_a;
 	printf("-\n");
+	printf("Organizacao da Stack_a: \n");
 	while (tmp)
 	{
 		printf("nbr: %ld - ", tmp->nbr);
