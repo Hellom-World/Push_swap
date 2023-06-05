@@ -9,6 +9,9 @@
 /*   Updated: 2023/05/30 12:24:26 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../push_swap.h"
+
 int ft_find_place_b(t_stack *stack_b, int nbr_push)
 {
     int i;
@@ -35,6 +38,17 @@ int ft_find_place_b(t_stack *stack_b, int nbr_push)
             i++;
         }
     }
+    return (i);
+}
+
+int bit_len(int nbr) {
+    int i = 0;
+
+    while (nbr > 0) {
+        i++;
+        nbr = nbr >> 1;
+    }
+
     return (i);
 }
 

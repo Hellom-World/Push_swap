@@ -6,7 +6,7 @@
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 18:41:11 by heolivei          #+#    #+#             */
-/*   Updated: 2023/06/01 18:45:06 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/06/05 17:42:34 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ void printListBinary(t_stack *head_a, t_stack *head_b)
         {
                 if(current_node_a != NULL)
                 {	
-			printf("nbr:");
-			numberToBinary(current_node_a->nbr);
-                        printf("   -- id: %ld  | ", current_node_a->index);
+			printf("index:");
+			numberToBinary(current_node_a->index);
+                        printf("   -- nbr: %ld  | ", current_node_a->nbr);
                         current_node_a = current_node_a->next;
                 }
                 else {
@@ -42,9 +42,9 @@ void printListBinary(t_stack *head_a, t_stack *head_b)
                 }
                 if(current_node_b != NULL)
                 {
-			printf("nbr:");
-                        numberToBinary(current_node_a->nbr);
-                        printf("   -- id: %ld  | ", current_node_a->index);
+			printf("index:");
+                        numberToBinary(current_node_a->index);
+                        printf("   -- nbr: %ld  | ", current_node_a->nbr);
                         current_node_b = current_node_b->next;
                 }
                  else {
@@ -105,8 +105,12 @@ t_stack	*ft_sort_b(t_stack **stack_a)
 	if (ft_node_len(*stack_a) == 3 && !ft_checkordem(*stack_a))
 		ft_sort_three(stack_a);
 	printf("-\n");
-	if (ft_node_len(stack_b) == 1)
-                ft_pa(stack_a, &stack_b);
+	if (ft_node_len(*stack_a) == 4 && !ft_checkordem(*stack_a))
+        {
+                printf("%ld\n", (*stack_a)->index);
+                //bit_len(tmp->nbr);
+                //printf("%d\n", bit_len(tmp->nbr));
+        }
 	return (stack_b);
 }
 
