@@ -30,13 +30,12 @@ int	main(int argc, char **argv)
 	}
 	
 	t_stack	*a;
-	//criar a 4com index!
 	a = ft_triagem(arr, argc - 1);
-	/*if (!a || ft_isdup(a))
+	if (!a || ft_isdup(a))
 	{
 		ft_free(&a);
 		ft_error();
-	}*/
+	}
 	if (!ft_checkordem(a))
 	{
 		ft_sort(&a);
