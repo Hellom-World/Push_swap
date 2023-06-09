@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 19:19:21 by heolivei          #+#    #+#             */
-/*   Updated: 2023/05/30 17:38:32 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/06/09 17:26:11 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int bit_len(int nbr);
 int	ft_isdup(t_stack *a);
 int	ft_nbr_min(t_stack *a);
 int	ft_nbr_max(t_stack *a);
+int	ft_index_max(t_stack *a);
 int	ft_node_len(t_stack *lst);
 int	ft_checkordem(t_stack *stack_a);
 int	ft_find_index(t_stack *a, int nbr);
