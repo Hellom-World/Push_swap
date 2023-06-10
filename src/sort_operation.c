@@ -167,7 +167,7 @@ t_stack	*ft_sort_b(t_stack **stack_a)
 	stack_b = NULL;
 
 	tmp = *stack_a;
-	printf("-\n");
+	/*printf("-\n");
 	printf("Organizacao da Stack_a: \n");
 	while (tmp)
 	{
@@ -175,14 +175,14 @@ t_stack	*ft_sort_b(t_stack **stack_a)
 		printf("id: %ld\n", tmp->index);
 		tmp = tmp->next;
 	}
-	printf("-\n");
+	printf("-\n");*/
 	if (ft_node_len(*stack_a) < 6 && !ft_checkordem(*stack_a))
         {
                *stack_a = ft_little_sort(*stack_a, stack_b);
         }
         else
         {
-                printListBinary(*stack_a, stack_b);
+                //printListBinary(*stack_a, stack_b);
                 *stack_a = ft_big_sort(*stack_a, stack_b);
         }
 	return (stack_b);
@@ -196,28 +196,28 @@ void	ft_sort(t_stack **stack_a)
 
 	stack_b = NULL;
 
-	printList(*stack_a, stack_b);	
+	//printList(*stack_a, stack_b);	
 	if (ft_node_len(*stack_a) == 2)
 	{
 		ft_sa(stack_a);
-		printList(*stack_a, stack_b);
-		printListBinary(*stack_a, stack_b);
+		//printList(*stack_a, stack_b);
+		//printListBinary(*stack_a, stack_b);
 	}
         else if(ft_node_len(*stack_a) == 3 && !ft_checkordem(*stack_a))
 		ft_sort_three(stack_a);
 	else
 	{	
 		stack_b = ft_sort_b(stack_a);
-		printf("Organizacao da Stack_a: \n");
+		/*printf("Organizacao da Stack_a: \n");
                 tmp = *stack_a;
 	        while (tmp)
 	        {
 		        printf("nbr: %ld - ", tmp->nbr);
 		        printf("id: %ld\n", tmp->index);
 		        tmp = tmp->next;
-	        }
-                printList(*stack_a, stack_b);
-		printListBinary(*stack_a, stack_b);
+	        }*/
+                //printList(*stack_a, stack_b);
+		//printListBinary(*stack_a, stack_b);
 	}
 	ft_free(&stack_b);
 }

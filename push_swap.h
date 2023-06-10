@@ -15,6 +15,9 @@
 
 # include "libft/libft.h"
 # include <stdio.h>
+# include <limits.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 typedef struct s_stack
 {
@@ -25,10 +28,9 @@ typedef struct s_stack
 }	t_stack;
 
 t_stack	*ft_end_node(t_stack *lst);
-t_stack	*ft_stringway(char **argv);
-t_stack	*ft_stack_new(int content, int index);
 t_stack *ft_sort_b(t_stack **stack_a);
 t_stack *ft_triagem(int *arr, int size);
+t_stack	*ft_stack_new(int content, int index);
 
 int bit_len(int nbr);
 int	ft_isdup(t_stack *a);
@@ -38,7 +40,10 @@ int	ft_index_max(t_stack *a);
 int	ft_node_len(t_stack *lst);
 int	ft_checkordem(t_stack *stack_a);
 int	ft_find_index(t_stack *a, int nbr);
+int args_checker(int argc, char **argv);
 int	ft_find_place_b(t_stack *stack_b, int nbr_push);
+
+long int	ft_long_atoi(const char *str);
 
 void    ft_error(void);
 void    ft_sa(t_stack **a);

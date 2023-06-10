@@ -12,43 +12,51 @@
 
 #include "../push_swap.h"
 
-int ft_find_place_b(t_stack *stack_b, int nbr_push)
+long int	ft_long_atoi(const char *str)
+{
+	int	c;
+	int	s;
+	long int	res;
+
+	c = 0;
+	s = 1;
+	res = 0;
+	while (str[c] == ' ' || str[c] == '\n' || str[c] == '\t'
+		|| str[c] == '\v' || str[c] == '\f' || str[c] == '\r')
+		c++;
+	if (str[c] == '-' || str[c] == '+')
+	{
+		if (str[c] == '-')
+			s = -1;
+		c++;
+	}
+	while (str[c] >= '0' && str[c] <= '9')
+	{
+		res = (res * 10) + (str[c] - 48);
+		c++;
+	}
+	return (res * s);
+}
+
+int args_checker(int argc, char **argv)
 {
     int i;
-    t_stack *tmp;
+    int j;
     i = 1;
-
-    if (stack_b == NULL) {
-        // Tratar o caso em que a pilha stack_b é nula
-        // Retornar um valor adequado ou tomar alguma ação apropriada
-        return -1; // Por exemplo, retornar um valor de erro
-    }
-
-    if (nbr_push > stack_b->nbr && nbr_push < ft_end_node(stack_b)->nbr)
-        i = 0;
-    else if (nbr_push > ft_nbr_max(stack_b))
-        i = ft_find_index(stack_b, ft_nbr_max(stack_b));
-    else
+    while (argv[i])
     {
-        tmp = stack_b->next;
-        while (stack_b && tmp && (stack_b->nbr < nbr_push || tmp->nbr > nbr_push))
+        j = 0;
+        while(argv[i][j])
         {
-            stack_b = stack_b->next;
-            tmp = stack_b->next;
-            i++;
+            if (!ft_isdigit(argv[i][j]) && argv[i][j] != '-' && argv[i][j] != '+')
+                return (0);
+            else if ((argv[i][j + 1] == '-') || (argv[i][j + 1] == '+'))
+                return (0);
+            else if (ft_long_atoi(argv[i]) > INT_MAX || ft_long_atoi(argv[i]) < INT_MIN)
+                return (0); 
+            j++;
         }
-    }
-    return (i);
-}
-
-int bit_len(int nbr) {
-    int i = 0;
-
-    while (nbr > 0) {
         i++;
-        nbr = nbr >> 1;
     }
-
-    return (i);
+    return (1);
 }
-

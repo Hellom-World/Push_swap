@@ -25,7 +25,7 @@ OBJ = ${SRC:.c=.o}
 
 ${NAME}:	${OBJ}
 		@make -C $(LIBFTDIR)
-		@${CC} ${FLAGS} ${OBJ} -o ${NAME} -L./libft -lft
+		@${CC} -g ${FLAGS} ${OBJ} -o ${NAME} -L./libft -lft
 
 all:	${NAME}
 
