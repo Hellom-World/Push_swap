@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils_2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 09:10:39 by heolivei          #+#    #+#             */
-/*   Updated: 2023/05/30 12:24:26 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/06/10 23:15:17 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 long int	ft_long_atoi(const char *str)
 {
-	int	c;
+	int c;
 	int	s;
 	long int	res;
 
@@ -53,7 +53,7 @@ int args_checker(int argc, char **argv)
             else if ((argv[i][j + 1] == '-') || (argv[i][j + 1] == '+'))
                 return (0);
             else if (ft_long_atoi(argv[i]) > INT_MAX || ft_long_atoi(argv[i]) < INT_MIN)
-                return (0); 
+                return (0);
             j++;
         }
         i++;
