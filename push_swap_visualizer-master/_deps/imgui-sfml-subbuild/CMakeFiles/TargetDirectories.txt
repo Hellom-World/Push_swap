@@ -1,3 +1,0 @@
-/nfs/homes/heolivei/Push_swap/push_swap_visualizer-master/_deps/imgui-sfml-subbuild/CMakeFiles/rebuild_cache.dir
-/nfs/homes/heolivei/Push_swap/push_swap_visualizer-master/_deps/imgui-sfml-subbuild/CMakeFiles/edit_cache.dir
-/nfs/homes/heolivei/Push_swap/push_swap_visualizer-master/_deps/imgui-sfml-subbuild/CMakeFiles/imgui-sfml-populate.dir
