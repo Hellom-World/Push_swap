@@ -6,7 +6,7 @@
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:34:40 by heolivei          #+#    #+#             */
-/*   Updated: 2023/04/25 15:13:58 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/06/11 10:48:27 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ int	ft_checkordem(t_stack *stack_a)
 		i = stack_a->nbr;
 		stack_a = stack_a->next;
 	}
-
 	return (1);
 }

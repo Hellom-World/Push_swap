@@ -6,7 +6,7 @@
 /*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:38:10 by heolivei          #+#    #+#             */
-/*   Updated: 2023/06/09 17:25:50 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/06/11 10:27:22 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int	ft_nbr_max(t_stack *a)
 	}
 	return (i);
 }
+
 int	ft_index_max(t_stack *a)
 {
 	int	i;

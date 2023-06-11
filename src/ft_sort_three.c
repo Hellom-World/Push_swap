@@ -6,7 +6,7 @@
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:16:31 by heolivei          #+#    #+#             */
-/*   Updated: 2023/05/18 19:00:15 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/06/11 10:35:10 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_sort_three(t_stack **stack_a)
 	else if (ft_nbr_max(*stack_a) == (*stack_a)->nbr)
 	{
 		ft_ra(stack_a);
-		if(!ft_checkordem(*stack_a))
+		if (!ft_checkordem(*stack_a))
 			ft_sa(stack_a);
 	}
 	else

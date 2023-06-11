@@ -21,10 +21,10 @@ int	main(int argc, char **argv)
 	if (argc > 1)
 	{
 		arr = malloc((argc - 1) * sizeof(int));
-		i = 0;
-		while ((i < argc - 1))
+		i = -1;
+		while ((++i < argc - 1))
 		{
-			arr[i] = ft_long_atoi(argv[i++ + 1]);
+			arr[i] = ft_long_atoi(argv[i + 1]);
 		}
 		a = ft_triagem(arr, argc - 1);
 		if (!a || ft_isdup(a) || !args_checker(argc, argv))
